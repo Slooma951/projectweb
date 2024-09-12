@@ -1,0 +1,315 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Black text for general content */
+    background-color: white; /* White background */
+    line-height: 1.6;
+    padding-top: 60px; /* Adjust for fixed navbar */
+}
+
+/* Navigation Bar */
+nav {
+    background: antiquewhite; /* White background for the navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Black text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Blue hover effect */
+    border-bottom: 2px solid #3498db;
+}
+#text {
+    color: black;
+}
+p{
+    color: black;
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: white; /* White background for hero */
+    color: black; /* Black text */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero a, .hero button {
+    font-size: 1.2rem;
+    color: black; /* Black text */
+    text-decoration: none;
+    background-color: white; /* White background for button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero a:hover, .hero button:hover {
+    background-color: #3498db; /* Blue hover effect */
+    border-color: #3498db;
+    color: white; /* White text on blue hover */
+}
+
+/* About Section */
+#about {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333; /* Black heading */
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+/* Dynamic Image Layout */
+.images {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+/* First Image: Main square */
+.images img:nth-child(1) {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+/* Second Image: Smaller square overlapping the first one */
+.images img:nth-child(2) {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    left: -50px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* Third Image: Half inside the second one, overlapping both */
+.images img:nth-child(3) {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    left: -100px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+/* Skills Section */
+#skills {
+    padding: 5rem 2rem;
+    background-color: white; /* White background */
+    text-align: center;
+    color: black; /* Black text */
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333; /* Black heading */
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.skills-grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-grid img:hover {
+    transform: scale(1.2);
+}
+
+/* Projects Section */
+#projects {
+    padding: 5rem 2rem;
+    background-color: white; /* White background */
+    text-align: center;
+    color: black; /* Black text */
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333; /* Black heading */
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-grid a {
+    display: block;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 5rem 2rem;
+    background-color: white; /* White background */
+    text-align: center;
+    color: black; /* Black text */
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333; /* Black heading */
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: scale(1.2);
+}
+
+.contact-links img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background: antiquewhite; /* White background for footer */
+    color: #333; /* Black text */
+    border-top: 2px solid #e0e0e0; /* Subtle border at the top */
+}
+
+footer p {
+    font-size: 1rem;
+    color: #666; /* Light grey text */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .skills-grid, .project-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .images {
+        flex-direction: column;
+    }
+}
