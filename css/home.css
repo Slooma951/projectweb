@@ -227,7 +227,9 @@ button {
 }
 
 .project-card {
-  min-height: 22rem;
+  display: flex;
+  min-height: 23rem;
+  flex-direction: column;
   padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 0.5rem;
@@ -260,8 +262,29 @@ button {
 .project-card ul {
   display: grid;
   gap: 0.45rem;
-  margin: 1rem 0 0;
+  margin: 1rem 0 1.25rem;
   padding-left: 1.15rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2.55rem;
+  margin-top: 0;
+  padding: 0.58rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--code);
+  color: var(--paper);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
 }
 
 .compact-section {
