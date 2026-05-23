@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salem Elatrash - Software Engineering and Data Analytics CV</title>
+  <style>
+    :root {
+      --accent: #0f4f5c;
+      --accent-dark: #0b2533;
+      --text: #17212b;
+      --muted: #5b6773;
+      --line: #d9e3e7;
+      --soft: #edf6f7;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #eef2f4;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+      font-size: 10.4pt;
+      line-height: 1.28;
+    }
+
+    body {
+      padding: 18px;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 13mm 14mm 12mm;
+      box-shadow: 0 18px 45px rgba(15, 37, 51, 0.14);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--accent-dark);
+      font-size: 28pt;
+      line-height: 1;
+      letter-spacing: 0;
+      font-weight: 760;
+    }
+
+    .headline {
+      margin-top: 5px;
+      color: var(--accent);
+      font-size: 10.8pt;
+      font-weight: 700;
+    }
+
+    .contact {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: right;
+      color: var(--muted);
+      font-size: 9.3pt;
+      line-height: 1.38;
+      white-space: nowrap;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.46fr 0.86fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .summary-strip {
+      margin: 7px 0 0;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      color: var(--text);
+      font-size: 9.45pt;
+      line-height: 1.32;
+    }
+
+    .summary-strip strong {
+      color: var(--accent-dark);
+      font-weight: 760;
+    }
+
+    section {
+      break-inside: avoid;
+      margin-bottom: 9px;
+    }
+
+    h2 {
+      margin: 0 0 5px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent-dark);
+      font-size: 10.4pt;
+      line-height: 1.15;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--text);
+      font-size: 10.5pt;
+      line-height: 1.18;
+      font-weight: 760;
+    }
+
+    .role,
+    .degree {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 9.2pt;
+      white-space: nowrap;
+      font-weight: 650;
+    }
+
+    .subline {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 9.4pt;
+    }
+
+    ul {
+      margin: 4px 0 0 16px;
+      padding: 0;
+    }
+
+    li {
+      margin: 2px 0;
+      padding-left: 1px;
+    }
+
+    .feature {
+      margin-bottom: 11px;
+      padding: 9px 10px 8px;
+      border: 1.5px solid rgba(15, 79, 92, 0.35);
+      border-left: 5px solid var(--accent);
+      background: var(--soft);
+      break-inside: avoid;
+    }
+
+    .feature-label {
+      margin: 0 0 2px;
+      color: var(--accent);
+      font-size: 8.6pt;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      font-weight: 850;
+    }
+
+    .feature h2 {
+      margin-bottom: 2px;
+      padding: 0;
+      border: 0;
+      color: var(--accent-dark);
+      font-size: 13.2pt;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .feature .subline {
+      margin-bottom: 4px;
+      color: var(--accent-dark);
+      font-weight: 650;
+    }
+
+    .item {
+      margin-bottom: 8px;
+      break-inside: avoid;
+    }
+
+    .skills {
+      display: grid;
+      gap: 5px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 7px;
+      align-items: start;
+    }
+
+    .skill-row strong {
+      color: var(--accent-dark);
+      font-size: 9.2pt;
+    }
+
+    .skill-row span {
+      color: var(--text);
+      font-size: 9.3pt;
+    }
+
+    .compact-list {
+      margin-top: 0;
+    }
+
+    .compact-list li {
+      margin: 2px 0;
+    }
+
+    .sidebar section {
+      margin-bottom: 10px;
+    }
+
+    .divider-note {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 9.2pt;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+        background: #ffffff;
+        font-size: 10.1pt;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 12mm 13mm 11mm;
+        box-shadow: none;
+      }
+
+      section,
+      .item,
+      .feature {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1>Salem Elatrash</h1>
+        <div class="headline">Level 8 BSc (Hons) Software Engineering graduate | Software Engineering, Data Analytics, Machine Learning &amp; AI Engineering</div>
+      </div>
+      <ul class="contact" aria-label="Personal details">
+        <li>Dublin, Ireland</li>
+        <li><a href="mailto:Salem.Elatrash@outlook.com">Salem.Elatrash@outlook.com</a></li>
+        <li><a href="tel:+353852789498">+353 85 278 9498</a></li>
+        <li><a href="https://linkedin.com/in/salem-elatrash">linkedin.com/in/salem-elatrash</a></li>
+        <li><a href="https://github.com/Slooma951">github.com/Slooma951</a></li>
+      </ul>
+    </header>
+
+    <p class="summary-strip">
+      <strong>Graduate software engineer</strong> with computer science foundations and hands-on Python, SQL, JavaScript, FastAPI, REST API, data analytics, dashboarding, classification modelling and NLP transformer project work. Targeting graduate and internship roles across software engineering, data analytics, machine learning and AI engineering in Ireland.
+    </p>
+
+    <main>
+      <div class="primary">
+        <section class="feature">
+          <p class="feature-label">Final Year Project</p>
+          <h2>WordFlow — AI Chrome Extension for Dyslexic Writing Support</h2>
+          <p class="subline">Supervised by Dr. Irene Murtagh, TU Dublin School of Informatics &amp; Cybersecurity</p>
+          <ul>
+            <li>Built an AI-powered Chrome extension using a fine-tuned T5 transformer model (NLP/ML) for real-time writing correction targeted at dyslexic users.</li>
+            <li>Trained a custom 6,571-pair dataset combining curated, JFLEG benchmark, and synthetically generated dyslexic error patterns.</li>
+            <li>Built a Python FastAPI backend (stateless REST API) and Manifest V3 Chrome extension (JavaScript).</li>
+            <li>Achieved 78% full correction accuracy; phonetic error accuracy ~92%; sub-second latency (300–800ms) on CPU.</li>
+            <li>Privacy-first architecture: no raw user text stored, GDPR-compliant, HTTPS encrypted.</li>
+            <li>Evaluated with real users recruited through Dyslexia Ireland; compared to Grammarly.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <div class="item">
+            <div class="role">
+              <h3>Data &amp; Game Systems Analyst — MC9 FiveM Server</h3>
+              <span class="date">March 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Managed and analysed player data for 20,000+ member community, 200+ daily active users.</li>
+              <li>Built Lua and JavaScript automation scripts, reducing manual admin work by 30%.</li>
+              <li>Applied SQL queries to track player retention, detect anomalies, improve engagement KPIs.</li>
+              <li>Led live testing, bug reporting, analytics-driven system improvements.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <h3>Academic Data Analyst — TU Dublin Projects</h3>
+              <span class="date">2023–2025</span>
+            </div>
+            <ul>
+              <li>Cleaned and visualised datasets (Titanic, Credit Risk) using Pandas, NumPy, Matplotlib.</li>
+              <li>Built classification models with Scikit-learn achieving 85%+ accuracy.</li>
+              <li>Created dashboards for academic presentations and decision support.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <h3>Student Coordinator — TU Dublin Computing Society</h3>
+              <span class="date">Sept 2023 – Present</span>
+            </div>
+            <ul>
+              <li>Organised peer-learning sessions on data analytics and programming fundamentals.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section>
+          <h2>Education</h2>
+          <div class="item">
+            <div class="degree">
+              <h3>BSc (Hons) Software Engineering</h3>
+              <span class="date">2022–2026</span>
+            </div>
+            <p class="subline">Technological University Dublin</p>
+            <p class="divider-note">Graduated 2026, Level 8.</p>
+            <p class="divider-note">Focus: Data Analytics, Machine Learning, Software Systems.</p>
+          </div>
+          <div class="item">
+            <div class="degree">
+              <h3>Leaving Certificate</h3>
+              <span class="date">2022</span>
+            </div>
+            <p class="subline">Hartstown Community School</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Technical Skills</h2>
+          <div class="skills">
+            <div class="skill-row">
+              <strong>Languages</strong>
+              <span>Python, SQL, JavaScript, Lua, Java, C++, PHP</span>
+            </div>
+            <div class="skill-row">
+              <strong>Software</strong>
+              <span>FastAPI, REST APIs, Chrome Extension development, Git/GitHub, automation scripts, software systems</span>
+            </div>
+            <div class="skill-row">
+              <strong>Data</strong>
+              <span>Pandas, NumPy, Matplotlib, SQL queries, Power BI, Excel, dashboards, KPI analysis</span>
+            </div>
+            <div class="skill-row">
+              <strong>ML/AI</strong>
+              <span>Scikit-learn, Hugging Face Transformers, NLP, transformer models, TensorFlow (beginner)</span>
+            </div>
+            <div class="skill-row">
+              <strong>Tools</strong>
+              <span>Jupyter, VS Code, IntelliJ, MySQL, MongoDB, Firebase</span>
+            </div>
+            <div class="skill-row">
+              <strong>Cloud</strong>
+              <span>AWS, Google Cloud (basic)</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Professional Development</h2>
+          <ul class="compact-list">
+            <li>Graduate Ireland Fair</li>
+            <li>AWS Career Event</li>
+            <li>Workday Tech Event</li>
+            <li>TU Dublin Open Day</li>
+            <li>TU Dublin Graduate Day</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </article>
+</body>
+</html>

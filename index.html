@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Salem Elatrash portfolio: WordFlow, AI Chrome extension work, software engineering skills and CV.">
+  <meta name="description" content="Salem Elatrash portfolio: software engineering, WordFlow, major group project, technical stack and CV.">
   <meta name="theme-color" content="#ffffff">
-  <title>Salem Elatrash | WordFlow + Software Engineering</title>
+  <title>Salem Elatrash | Software Engineering Portfolio</title>
   <link rel="stylesheet" href="css/home.css">
   <script defer src="js/site.js"></script>
 </head>
@@ -17,129 +17,119 @@
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Go to home">SE</a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#wordflow">WordFlow</a>
+      <a href="#projects">Projects</a>
       <a href="#stack">Stack</a>
-      <a href="#cv">CV</a>
+      <button type="button" data-open-cv>CV</button>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" class="page-shell">
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="code-orbit" aria-hidden="true">
-        <span>const focus = "WordFlow";</span>
-        <span>POST /correct</span>
-        <span>latency: 300-800ms</span>
-        <span>privacy.first()</span>
+      <p class="eyebrow">Graduate Software Engineer - Dublin</p>
+      <h1 id="hero-title"><span>Salem</span> <span>Elatrash</span></h1>
+      <p class="hero-lead">
+        I build clean web tools, APIs and AI-powered software. Focused on practical engineering, readable systems and projects that solve real problems.
+      </p>
+      <div class="hero-actions" aria-label="Primary links">
+        <a class="button primary" href="#projects">View Projects</a>
+        <button class="button" type="button" data-open-cv>Open CV</button>
+        <a class="button" href="#contact">Contact</a>
       </div>
-
-      <div class="hero-content">
-        <p class="eyebrow">Graduate software engineer - Dublin</p>
-        <h1 id="hero-title" class="glitch" data-text="Salem Elatrash">Salem Elatrash</h1>
-        <p class="role-line" aria-live="polite">
-          <span data-role-text>AI Chrome Extension Developer</span>
-        </p>
-        <p class="hero-lead">
-          I build clean software, APIs and AI tools. My headline project is WordFlow, a final-year thesis turned Chrome extension for dyslexic writing support.
-        </p>
-        <div class="hero-actions" aria-label="Primary links">
-          <a class="button primary" href="#wordflow">View WordFlow</a>
-          <a class="button quiet" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
-          <a class="button quiet" href="mailto:Salem.Elatrash@outlook.com">Contact</a>
-        </div>
-      </div>
+      <p class="code-line" aria-label="Developer focus">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>FastAPI</span>
+        <span>NLP</span>
+      </p>
     </section>
 
-    <section id="wordflow" class="section" aria-labelledby="wordflow-title">
-      <div class="section-inner">
-        <p class="section-kicker">Featured project</p>
-        <h2 id="wordflow-title">WordFlow - AI writing support in the browser.</h2>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">Selected work</h2>
+      </div>
 
-        <div class="showcase">
-          <article class="project-panel">
-            <p class="panel-label">Final-year thesis + Chrome extension</p>
-            <h3>Built for real-time dyslexic writing correction.</h3>
-            <p>
-              Fine-tuned T5 model, FastAPI REST backend and Manifest V3 extension. Released as a Chrome extension project with a privacy-first flow: no raw user text stored.
-            </p>
-            <div class="metrics" aria-label="WordFlow metrics">
-              <span><strong>6,571</strong> training pairs</span>
-              <span><strong>78%</strong> full correction accuracy</span>
-              <span><strong>92%</strong> phonetic accuracy</span>
-            </div>
-            <div class="project-actions">
-              <a class="button primary" href="mailto:Salem.Elatrash@outlook.com?subject=WordFlow%20Demo">Request demo</a>
-              <a class="button outline-dark" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">See CV</a>
-            </div>
-          </article>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-meta">
+            <span>01</span>
+            <span>Final-year thesis</span>
+          </div>
+          <h3>WordFlow</h3>
+          <p>
+            AI Chrome extension for dyslexic writing support, using a fine-tuned T5 model, FastAPI REST backend and Manifest V3 extension.
+          </p>
+          <ul>
+            <li>Privacy-first correction flow</li>
+            <li>6,571 training pairs</li>
+            <li>78% full correction accuracy</li>
+          </ul>
+        </article>
 
-          <aside class="terminal-card" aria-label="WordFlow code themed preview">
-            <div class="terminal-top">
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>wordflow.ts</p>
-            </div>
-            <pre><code>const input = "I want too make my sentance clear";
-
-await wordflow.correct(input, {
-  model: "fine-tuned-t5",
-  mode: "privacy-first"
-});
-
-// "I want to make my sentence clear"</code></pre>
-          </aside>
-        </div>
+        <article class="project-card">
+          <div class="project-meta">
+            <span>02</span>
+            <span>Major group project</span>
+          </div>
+          <h3>Major Group Project</h3>
+          <p>
+            Group software project placeholder ready for your edits. Use this space for the project name, role, stack, GitHub link and final outcome.
+          </p>
+          <ul>
+            <li>Team-based delivery</li>
+            <li>System design and implementation</li>
+            <li>Project details to be updated</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <section id="stack" class="section compact-section" aria-labelledby="stack-title">
-      <div class="section-inner centered">
-        <p class="section-kicker">Stack</p>
-        <h2 id="stack-title">Tools I can work with.</h2>
-        <div class="chip-grid" aria-label="Technical skills">
-          <span>Python</span>
-          <span>JavaScript</span>
-          <span>SQL</span>
-          <span>FastAPI</span>
-          <span>REST APIs</span>
-          <span>Chrome Extensions</span>
-          <span>NLP</span>
-          <span>Transformers</span>
-          <span>Power BI</span>
-          <span>GitHub</span>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Stack</p>
+        <h2 id="stack-title">Core tools</h2>
       </div>
-    </section>
-
-    <section id="cv" class="section cv-section" aria-labelledby="cv-title">
-      <div class="section-inner cv-card">
-        <div>
-          <p class="section-kicker">CV</p>
-          <h2 id="cv-title">Short version: software, AI, data.</h2>
-          <p>
-            The full PDF covers WordFlow, my software engineering degree, data analytics work and technical stack.
-          </p>
-        </div>
-        <div class="cv-actions">
-          <a class="button primary" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
-          <a class="button outline-dark" href="pdf/SalemElatrashCV.pdf" download>Download PDF</a>
-        </div>
+      <div class="stack-list" aria-label="Technical skills">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>SQL</span>
+        <span>FastAPI</span>
+        <span>REST APIs</span>
+        <span>Chrome Extensions</span>
+        <span>NLP</span>
+        <span>Transformers</span>
+        <span>GitHub</span>
+        <span>Power BI</span>
       </div>
     </section>
 
     <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-      <div class="section-inner centered">
-        <p class="section-kicker">Contact</p>
-        <h2 id="contact-title">Let us build something useful.</h2>
-        <div class="contact-links" aria-label="Contact links">
-          <a href="mailto:Salem.Elatrash@outlook.com">Salem.Elatrash@outlook.com</a>
-          <a href="tel:+353852789498">+353 85 278 9498</a>
-          <a href="https://www.linkedin.com/in/salem-elatrash/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Find me here</h2>
+      </div>
+      <div class="contact-links" aria-label="Contact links">
+        <a href="mailto:Salem.Elatrash@outlook.com">Outlook</a>
+        <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/salem-elatrash/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>
+
+  <dialog class="cv-modal" aria-labelledby="cv-modal-title">
+    <div class="modal-header">
+      <div>
+        <p class="eyebrow">CV</p>
+        <h2 id="cv-modal-title">Salem Elatrash CV</h2>
+      </div>
+      <button class="icon-button" type="button" data-close-cv aria-label="Close CV">x</button>
+    </div>
+    <iframe src="pdf/SalemElatrashCV.html" title="Salem Elatrash CV preview"></iframe>
+    <div class="modal-actions">
+      <a class="button primary" href="pdf/SalemElatrashCV.pdf" download>Download PDF</a>
+      <button class="button" type="button" data-close-cv>Close</button>
+    </div>
+  </dialog>
 </body>
 </html>
