@@ -6,17 +6,16 @@
   }
 
   const phrases = [
-    "Software Engineer",
     "AI Chrome Extension Developer",
-    "FastAPI and REST API Builder",
-    "Data Analytics Graduate",
-    "Machine Learning Explorer"
+    "FastAPI + REST API Builder",
+    "NLP Project Developer",
+    "Software Engineering Graduate"
   ];
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reduceMotion) {
-    roleText.textContent = phrases.join(" | ");
+    roleText.textContent = phrases[0];
     return;
   }
 

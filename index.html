@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Salem Elatrash portfolio: graduate software engineer, data analyst and AI Chrome extension developer showcasing WordFlow, CV, technical skills and project links.">
-  <meta name="theme-color" content="#0f766e">
-  <title>Salem Elatrash | Software Engineer Portfolio</title>
+  <meta name="description" content="Salem Elatrash portfolio: WordFlow, AI Chrome extension work, software engineering skills and CV.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Salem Elatrash | WordFlow + Software Engineering</title>
   <link rel="stylesheet" href="css/home.css">
   <script defer src="js/site.js"></script>
 </head>
@@ -18,8 +18,7 @@
     <a class="brand" href="#home" aria-label="Go to home">SE</a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#wordflow">WordFlow</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -27,275 +26,120 @@
 
   <main id="main">
     <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="code-orbit" aria-hidden="true">
+        <span>const focus = "WordFlow";</span>
+        <span>POST /correct</span>
+        <span>latency: 300-800ms</span>
+        <span>privacy.first()</span>
+      </div>
+
       <div class="hero-content">
-        <p class="eyebrow">Graduate Software Engineer | Dublin, Ireland</p>
-        <h1 id="hero-title">Salem Elatrash</h1>
-        <p class="hero-lead">
-          I build practical software across AI, data analytics, web systems and browser extensions, with a focus on tools that are useful, clear and ready for real users.
-        </p>
+        <p class="eyebrow">Graduate software engineer - Dublin</p>
+        <h1 id="hero-title" class="glitch" data-text="Salem Elatrash">Salem Elatrash</h1>
         <p class="role-line" aria-live="polite">
-          <span data-role-text>Software Engineer</span>
+          <span data-role-text>AI Chrome Extension Developer</span>
+        </p>
+        <p class="hero-lead">
+          I build clean software, APIs and AI tools. My headline project is WordFlow, a final-year thesis turned Chrome extension for dyslexic writing support.
         </p>
         <div class="hero-actions" aria-label="Primary links">
           <a class="button primary" href="#wordflow">View WordFlow</a>
-          <a class="button light" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
-          <a class="button outline" href="pdf/SalemElatrashCV.pdf" download>Download CV</a>
-        </div>
-      </div>
-
-      <div class="hero-proof" aria-label="Portfolio highlights">
-        <div>
-          <strong>2026</strong>
-          <span>BSc (Hons) Software Engineering</span>
-        </div>
-        <div>
-          <strong>WordFlow</strong>
-          <span>Final-year thesis and Chrome extension</span>
-        </div>
-        <div>
-          <strong>AI + Data</strong>
-          <span>FastAPI, NLP, SQL and analytics</span>
+          <a class="button quiet" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
+          <a class="button quiet" href="mailto:Salem.Elatrash@outlook.com">Contact</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section about-section">
-      <div class="section-inner split">
-        <div>
-          <p class="section-kicker">About</p>
-          <h2>Software engineering with a user-first mindset.</h2>
-        </div>
-        <div class="about-copy">
-          <p>
-            I am a Level 8 BSc (Hons) Software Engineering graduate from Technological University Dublin, targeting graduate and internship roles across software engineering, data analytics, machine learning and AI engineering.
-          </p>
-          <p>
-            My strongest work sits where product thinking meets implementation: APIs, Chrome extension development, SQL-backed analysis, dashboards, automation scripts and NLP model integration.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="wordflow" class="section wordflow-section" aria-labelledby="wordflow-title">
+    <section id="wordflow" class="section" aria-labelledby="wordflow-title">
       <div class="section-inner">
-        <div class="section-heading">
-          <p class="section-kicker">Featured thesis project</p>
-          <h2 id="wordflow-title">WordFlow - AI Chrome Extension for Dyslexic Writing Support</h2>
-          <p>
-            WordFlow is my final-year thesis project: an AI-powered Chrome extension released as a browser tool for real-time writing correction, built for dyslexic users and evaluated against established writing support workflows.
-          </p>
-        </div>
+        <p class="section-kicker">Featured project</p>
+        <h2 id="wordflow-title">WordFlow - AI writing support in the browser.</h2>
 
-        <div class="wordflow-grid">
-          <article class="wordflow-detail">
-            <div class="tag-row" aria-label="Project tags">
-              <span>Chrome Extension</span>
-              <span>Final-year thesis</span>
-              <span>Privacy-first</span>
-            </div>
-            <h3>Built from model to browser.</h3>
+        <div class="showcase">
+          <article class="project-panel">
+            <p class="panel-label">Final-year thesis + Chrome extension</p>
+            <h3>Built for real-time dyslexic writing correction.</h3>
             <p>
-              I designed the full workflow: a fine-tuned T5 transformer model, a stateless Python FastAPI backend, and a Manifest V3 JavaScript extension that helps users correct writing in real time.
+              Fine-tuned T5 model, FastAPI REST backend and Manifest V3 extension. Released as a Chrome extension project with a privacy-first flow: no raw user text stored.
             </p>
-            <ul class="feature-list">
-              <li>Custom 6,571-pair dataset combining curated, JFLEG benchmark and synthetic dyslexic error patterns.</li>
-              <li>78% full correction accuracy, around 92% phonetic error accuracy, and 300-800ms CPU latency.</li>
-              <li>No raw user text stored, HTTPS encrypted flow, and a GDPR-aware architecture.</li>
-              <li>Real-user evaluation through Dyslexia Ireland participants and comparison with Grammarly.</li>
-            </ul>
+            <div class="metrics" aria-label="WordFlow metrics">
+              <span><strong>6,571</strong> training pairs</span>
+              <span><strong>78%</strong> full correction accuracy</span>
+              <span><strong>92%</strong> phonetic accuracy</span>
+            </div>
             <div class="project-actions">
-              <a class="button primary" href="mailto:Salem.Elatrash@outlook.com?subject=WordFlow%20Chrome%20Extension%20Demo">Request WordFlow demo</a>
-              <a class="button ghost" href="#cv">See it on my CV</a>
+              <a class="button primary" href="mailto:Salem.Elatrash@outlook.com?subject=WordFlow%20Demo">Request demo</a>
+              <a class="button outline-dark" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">See CV</a>
             </div>
           </article>
 
-          <div class="extension-preview" aria-label="WordFlow interface preview">
-            <div class="browser-bar">
+          <aside class="terminal-card" aria-label="WordFlow code themed preview">
+            <div class="terminal-top">
               <span></span>
               <span></span>
               <span></span>
+              <p>wordflow.ts</p>
             </div>
-            <div class="extension-card">
-              <div class="extension-header">
-                <strong>WordFlow</strong>
-                <span>Live assist</span>
-              </div>
-              <div class="writing-sample">
-                <p class="sample-label">Before</p>
-                <p>I want too make my sentance more clear for my thesis.</p>
-              </div>
-              <div class="correction-line"></div>
-              <div class="writing-sample corrected">
-                <p class="sample-label">After</p>
-                <p>I want to make my sentence clearer for my thesis.</p>
-              </div>
-              <div class="model-stack">
-                <span>T5 NLP model</span>
-                <span>FastAPI REST API</span>
-                <span>Manifest V3</span>
-              </div>
-            </div>
-          </div>
+            <pre><code>const input = "I want too make my sentance clear";
+
+await wordflow.correct(input, {
+  model: "fine-tuned-t5",
+  mode: "privacy-first"
+});
+
+// "I want to make my sentence clear"</code></pre>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
-      <div class="section-inner">
-        <div class="section-heading compact-heading">
-          <p class="section-kicker">Technical stack</p>
-          <h2 id="skills-title">Tools I use to ship useful work.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Languages</h3>
-            <p>Python, SQL, JavaScript, Lua, Java, C++, PHP</p>
-          </article>
-          <article class="skill-card">
-            <h3>Software</h3>
-            <p>FastAPI, REST APIs, Chrome extensions, Git, GitHub, automation scripts</p>
-          </article>
-          <article class="skill-card">
-            <h3>Data</h3>
-            <p>Pandas, NumPy, Matplotlib, SQL queries, Power BI, Excel, dashboards</p>
-          </article>
-          <article class="skill-card">
-            <h3>AI and ML</h3>
-            <p>Hugging Face Transformers, NLP, Scikit-learn, classification models, TensorFlow basics</p>
-          </article>
-        </div>
-
-        <div class="icon-strip" aria-label="Technology icons">
-          <img src="img/java.png" alt="Java">
-          <img src="img/js.png" alt="JavaScript">
-          <img src="img/html.png" alt="HTML">
-          <img src="img/css.png" alt="CSS">
-          <img src="img/mysql.png" alt="MySQL">
-          <img src="img/git.png" alt="Git">
-          <img src="img/linux.png" alt="Linux">
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
-      <div class="section-inner">
-        <div class="section-heading compact-heading">
-          <p class="section-kicker">Selected work</p>
-          <h2 id="projects-title">More project links for employers.</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <img src="img/project1.png" alt="Distributed voting system project preview">
-            <div>
-              <h3>Distributed Voting System</h3>
-              <p>Academic software project focused on structured system design and implementation.</p>
-              <a href="https://github.com/dannya123-blm/DVSP" target="_blank" rel="noopener noreferrer">View repository</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="img/project2.png" alt="Programming challenge project preview">
-            <div>
-              <h3>Programming Challenge</h3>
-              <p>Problem-solving work showing GitHub workflow, code structure and delivery.</p>
-              <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="img/pro3.png" alt="Object oriented analysis and design project preview">
-            <div>
-              <h3>OOAD Project</h3>
-              <p>Object-oriented analysis and design project with practical modelling work.</p>
-              <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
-            </div>
-          </article>
+    <section id="stack" class="section compact-section" aria-labelledby="stack-title">
+      <div class="section-inner centered">
+        <p class="section-kicker">Stack</p>
+        <h2 id="stack-title">Tools I can work with.</h2>
+        <div class="chip-grid" aria-label="Technical skills">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>SQL</span>
+          <span>FastAPI</span>
+          <span>REST APIs</span>
+          <span>Chrome Extensions</span>
+          <span>NLP</span>
+          <span>Transformers</span>
+          <span>Power BI</span>
+          <span>GitHub</span>
         </div>
       </div>
     </section>
 
     <section id="cv" class="section cv-section" aria-labelledby="cv-title">
-      <div class="section-inner">
-        <div class="cv-layout">
-          <div>
-            <p class="section-kicker">CV</p>
-            <h2 id="cv-title">My CV is ready to view or download.</h2>
-            <p>
-              The CV highlights WordFlow, my software engineering degree, technical skills, data analytics work and contact details for recruiters.
-            </p>
-            <div class="project-actions">
-              <a class="button primary" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
-              <a class="button ghost" href="pdf/SalemElatrashCV.pdf" download>Download PDF</a>
-            </div>
-          </div>
-          <article class="cv-preview" aria-label="CV preview">
-            <header>
-              <p>Salem Elatrash</p>
-              <span>Level 8 BSc (Hons) Software Engineering graduate</span>
-            </header>
-            <div class="cv-preview-summary">
-              <strong>Graduate software engineer</strong>
-              <span>Python, SQL, JavaScript, FastAPI, REST APIs, data analytics, dashboards, NLP transformer project work and Chrome extension development.</span>
-            </div>
-            <div class="cv-preview-feature">
-              <p>Final Year Project</p>
-              <h3>WordFlow - AI Chrome Extension for Dyslexic Writing Support</h3>
-              <ul>
-                <li>Fine-tuned T5 transformer model for real-time writing correction.</li>
-                <li>FastAPI backend, Manifest V3 JavaScript extension and privacy-first HTTPS flow.</li>
-                <li>78% full correction accuracy and around 92% phonetic error accuracy.</li>
-              </ul>
-            </div>
-            <div class="cv-preview-columns">
-              <div>
-                <h3>Core Skills</h3>
-                <p>Python, SQL, JavaScript, Java, C++, PHP, Git, Linux, MySQL, Power BI</p>
-              </div>
-              <div>
-                <h3>Education</h3>
-                <p>BSc (Hons) Software Engineering, Technological University Dublin, 2022-2026</p>
-              </div>
-            </div>
-          </article>
+      <div class="section-inner cv-card">
+        <div>
+          <p class="section-kicker">CV</p>
+          <h2 id="cv-title">Short version: software, AI, data.</h2>
+          <p>
+            The full PDF covers WordFlow, my software engineering degree, data analytics work and technical stack.
+          </p>
+        </div>
+        <div class="cv-actions">
+          <a class="button primary" href="pdf/SalemElatrashCV.pdf" target="_blank" rel="noopener">Open CV</a>
+          <a class="button outline-dark" href="pdf/SalemElatrashCV.pdf" download>Download PDF</a>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-      <div class="section-inner contact-layout">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Let us talk software, AI or graduate roles.</h2>
-          <p>
-            I am open to graduate software engineering, data analytics, machine learning and AI engineering opportunities.
-          </p>
-        </div>
-
+      <div class="section-inner centered">
+        <p class="section-kicker">Contact</p>
+        <h2 id="contact-title">Let us build something useful.</h2>
         <div class="contact-links" aria-label="Contact links">
-          <a href="mailto:Salem.Elatrash@outlook.com">
-            <img src="img/outlook.png" alt="">
-            <span>Salem.Elatrash@outlook.com</span>
-          </a>
-          <a href="tel:+353852789498">
-            <span class="contact-icon" aria-hidden="true">+</span>
-            <span>+353 85 278 9498</span>
-          </a>
-          <a href="https://www.linkedin.com/in/salem-elatrash/" target="_blank" rel="noopener noreferrer">
-            <img src="img/linkden.png" alt="">
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">
-            <img src="img/githubwhite.png" alt="">
-            <span>GitHub</span>
-          </a>
+          <a href="mailto:Salem.Elatrash@outlook.com">Salem.Elatrash@outlook.com</a>
+          <a href="tel:+353852789498">+353 85 278 9498</a>
+          <a href="https://www.linkedin.com/in/salem-elatrash/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Slooma951" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <span>Salem Elatrash</span>
-    <span>Portfolio updated for 2026 graduate opportunities.</span>
-  </footer>
 </body>
 </html>
